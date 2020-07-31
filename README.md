@@ -1,4 +1,4 @@
 # LaraPack
 Webpack template for laravel
 
-_**Warning!** package.json will be replaced with package files publishing_ 
+_**Warning!** \_package.json need process (rename to package.json) manually_ 
