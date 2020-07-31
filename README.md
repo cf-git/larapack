@@ -1,2 +1,2 @@
-# larapack
+# LaraPack
 Webpack template for laravel
