@@ -18,14 +18,11 @@ class CFServiceProvider extends ServiceProvider
     public function register()
     {
         $this->publishes([
-            ( __DIR__ . '/package.json') => base_path('package.json'),
-        ], ['package.json', 'larapack']);
-        $this->publishes([
-            ( __DIR__ . '/rootfiles') => base_path(),
+            ( __DIR__ . '/rootfiles') => base_path('/'),
         ], ['larapack-files', 'larapack']);
         $this->publishes([
-            ( __DIR__ . '/resources') => resource_path(),
-        ], ['larapack-resources', 'larapack-files', 'larapack']);
+            ( __DIR__ . '/resources') => resource_path('/'),
+        ], ['larapack-resources', 'larapack']);
         parent::register();
     }
 }
