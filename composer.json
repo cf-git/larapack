@@ -2,14 +2,14 @@
     "name": "cf-git/larapack",
     "description": "Webpack template for laravel",
     "type": "package",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "authors": [
         {
             "name": "Sergei Shubin",
             "email": "is.captain.fail@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "php": ">=7.1.3"
     },
