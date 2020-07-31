@@ -18,7 +18,7 @@ class CFServiceProvider extends ServiceProvider
     public function register()
     {
         $this->publishes([
-            ( __DIR__ . '/package.json') => base_path(),
+            ( __DIR__ . '/package.json') => base_path('package.json'),
         ], ['package.json', 'larapack']);
         $this->publishes([
             ( __DIR__ . '/rootfiles') => base_path(),
