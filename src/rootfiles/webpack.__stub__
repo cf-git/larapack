@@ -4,6 +4,7 @@ const {styles, scripts} = require('./webpack/templates');
 
 const ENV = process.env.NODE_ENV;
 const path = require('path');
+const holderFolder = 'DummyFolder';
 
 const exportList = [];
 
@@ -19,7 +20,7 @@ const files = [
     let fontStyles = {
         mode: ENV,
         entry: {
-            fonts: path.resolve(__dirname, "resources/sass/admin/fonts.scss"),
+            fonts: path.resolve(__dirname, `resources/sass/${holderFolder}/fonts.scss`),
         },
         output,
         plugins: {
@@ -39,14 +40,14 @@ const files = [
     exportList.push(styles({
         mode: ENV,
         entry: {
-            bootstrap: path.resolve(__dirname, "resources/sass/admin/bootstrap/bootstrap.scss"),
+            bootstrap: path.resolve(__dirname, `resources/sass/${holderFolder}/bootstrap/bootstrap.scss`),
         },
         output,
     }, 'scss'));
     exportList.push(styles({
         mode: ENV,
         entry: {
-            app: path.resolve(__dirname, "resources/sass/admin/app.scss"),
+            app: path.resolve(__dirname, `resources/sass/${holderFolder}/app.scss`),
         },
         output,
         resolve: {
@@ -54,19 +55,19 @@ const files = [
         },
     }, 'scss'));
 })({
-    path: path.resolve(__dirname, 'public/admin/styles'),
-    publicPath: "/admin/styles/",
+    path: path.resolve(__dirname, `public/${holderFolder}/styles`),
+    publicPath: `/${holderFolder}/styles/`,
 }, files);
 
 exportList.push(scripts({
     mode: ENV,
     entry: {
-        app: path.resolve(__dirname, "resources/js/admin/app.js")
+        app: path.resolve(__dirname, `resources/js/${holderFolder}/app.js`)
     },
     output: {
         filename: "[name].js",
-        path: path.resolve(__dirname, 'public/admin/scripts'),
-        publicPath: "/admin/scripts/",
+        path: path.resolve(__dirname, `public/${holderFolder}/scripts`),
+        publicPath: `/${holderFolder}/scripts/`,
     },
     resolve: {
         modules: ['node_modules']
