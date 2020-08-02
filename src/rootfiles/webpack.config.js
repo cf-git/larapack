@@ -1,3 +1,3 @@
 module.exports = ([])
-    .concat(require('./webpack.admin'))
+// Append config placeholder // .concat(require('./webpack.DummyHolder'))
 ;
