@@ -2,7 +2,7 @@
     "name": "cf-git/larapack",
     "description": "Webpack template for laravel",
     "type": "package",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "authors": [
         {
             "name": "Sergei Shubin",
